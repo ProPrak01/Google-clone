@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Clone</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function websitesearch(event) {
+			event.preventDefault();
+			const searchQuery = document.getElementById("searchBar").value;
+			const googleSearchUrl = `https://www.google.com/search?q=${searchQuery}`;
+			window.location.href = googleSearchUrl;
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<a href="#"><img src="googlelogo.png" alt="Google Logo"></a>
+		<form onsubmit="websitesearch(event)">
+			<input type="text" id="searchBar" name="search" placeholder="Search Google">
+			<button type="submit">Google Search</button>
+			<button type="submit">I'm Feeling Lucky</button>
+		</form>
+	</header>
+</body>
+</html>
